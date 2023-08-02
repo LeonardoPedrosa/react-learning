@@ -1,0 +1,42 @@
+/* Cores principais do anime Pokemon */
+:root {
+  --pokemon-red: #FF1A1A;
+  --pokemon-yellow: #FFCB05;
+  --pokemon-blue: #0085CF;
+  --pokemon-green: #008553;
+}
+
+/* Estilos da NavBar */
+nav {
+  background-color: var(--pokemon-red);
+  padding: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+}
+
+nav li {
+  margin: 0 10px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px;
+}
+
+/* nav a:hover {
+  background-color: var(--pokemon-red);
+} */
+
+/* Estilos adicionais para as páginas */
+h2 {
+  color: var(--pokemon-blue);
+}
+
+p {
+  color: var(--pokemon-green);
+}
