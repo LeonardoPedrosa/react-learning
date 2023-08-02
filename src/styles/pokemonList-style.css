@@ -1,0 +1,43 @@
+/* Estilos para a lista de Pokemons */
+
+.pokemon-list ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .pokemon-list li {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .pokemon-list li:hover {
+    background-color: #e0e0e0;
+  }
+
+.pokemon-details {
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.pokemon-details h3 {
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.pokemon-details img {
+  max-width: 200px;
+  display: block;
+  margin: 0 auto;
+}
+
+.pokemon-details p {
+  margin: 5px 0;
+}
