@@ -1,5 +1,10 @@
 /* Estilos para a lista de Pokemons */
 
+ul.pokemon-list{ 
+  display: grid;
+  padding: 0 3rem;
+}
+
 .pokemon-list ul {
     list-style: none;
     padding: 0;

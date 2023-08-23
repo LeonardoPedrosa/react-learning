@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import '../styles/pokemonList-style.css';
+import { SplitScreen } from './SplitScreen';
 
 const Pokemon = () => {
   const [pokemons, setPokemons] = useState([]);  
@@ -38,10 +39,9 @@ const Pokemon = () => {
     setSelectedPokemon(pokemon);
   };
 
-  return (
-    <div>
-      <h2>Pokémon List</h2>
-      <ul class="pokemon-list">
+  const PokemonList =()=>{
+    return(
+      <ul className="pokemon-list">
         {pokemons.map(pokemon => (
           <li
             key={pokemon.name}
@@ -51,16 +51,34 @@ const Pokemon = () => {
           </li>
         ))}
       </ul>
+    )
+  };
 
-      {selectedPokemon && pokemonInfo && (
-        <div className="pokemon-details">
-          <h3>{selectedPokemon.name.charAt(0).toUpperCase() + selectedPokemon.name.slice(1)}</h3>
-          <img src={pokemonInfo.sprites.front_default} alt={selectedPokemon.name} />
-          <p>Height: {pokemonInfo.height}</p>
-          <p>Weight: {pokemonInfo.weight}</p>
-          {/* ... outras informações que você queira exibir ... */}
-        </div>
-      )}
+  const PokemonDetails = () => {
+    return(
+      <div>
+        {selectedPokemon && pokemonInfo && (
+          <div className="pokemon-details">
+            <h3>{selectedPokemon.name.charAt(0).toUpperCase() + selectedPokemon.name.slice(1)}</h3>
+            <img src={pokemonInfo.sprites.front_default} alt={selectedPokemon.name} />
+            <p>Height: {pokemonInfo.height}</p>
+            <p>Weight: {pokemonInfo.weight}</p>
+            {/* ... outras informações que você queira exibir ... */}
+          </div>
+        )}
+      </div>
+    )
+  };
+
+  return (
+    <div class="container">
+      <h2>Pokémon List</h2>
+        <SplitScreen
+        left={PokemonList}
+        right={PokemonDetails}
+        leftWeight={1}
+        rightWeight={3}
+        />
     </div>
   );
 };

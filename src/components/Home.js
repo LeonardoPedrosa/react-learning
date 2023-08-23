@@ -1,11 +1,17 @@
 import React from 'react';
 
+
+const LeftHandComponent = () => {
+	return <p style={{ backgroundColor: 'green' }}>Left!</p>;
+}
+
+const RightHandComponent = () => {
+	return <p style={{ backgroundColor: 'red' }}>Right!</p>;
+}
+
 const Home = () => {
   return (
-    <div>
-      <h2>Home</h2>
-      <p>Welcome to the Home page!</p>
-    </div>
+   <h2>Página em desenvolvimento</h2>
   );
 };
 
